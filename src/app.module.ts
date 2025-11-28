@@ -12,9 +12,9 @@ import { join } from 'path';
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'), // Code First
+      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
-      graphiql: true, // /graphql 에서 IDE 열리게
+      graphiql: true,
     }),
     PrismaModule,
     RestaurantModule,

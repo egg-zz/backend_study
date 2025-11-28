@@ -1,4 +1,3 @@
-// prisma/seed.ts
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -54,13 +53,13 @@ async function main() {
 
   for (const r of restaurants) {
     await prisma.restaurant.upsert({
-      where: { name: r.name }, // 같은 이름 있으면 update, 없으면 create
+      where: { name: r.name },
       update: {},
       create: r,
     });
   }
 
-  console.log('✅ Seed 완료!');
+  console.log('Seed 완료!');
 }
 
 main()

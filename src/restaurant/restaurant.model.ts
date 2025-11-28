@@ -1,4 +1,3 @@
-// src/restaurant/restaurant.model.ts
 import { ObjectType, Field, Int } from '@nestjs/graphql';
 
 @ObjectType()
